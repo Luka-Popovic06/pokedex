@@ -18,3 +18,9 @@ h1 {
   font-size: 70px;
   color: yellow;
 }
+/*Main*/
+.pokemon-type-img {
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+}
