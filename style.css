@@ -19,6 +19,10 @@ h1 {
   color: yellow;
 }
 /*Main*/
+.container {
+  width: 100%;
+  display: flex;
+}
 .pokemon-type-img {
   width: 90px;
   height: 90px;
