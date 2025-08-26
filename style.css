@@ -47,7 +47,8 @@ h1 {
 .pokemon-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 8px;
+  column-gap: 20px;
+  row-gap: 10px;
   margin: 0;
   padding-left: 40px;
   overflow: auto;
