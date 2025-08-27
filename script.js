@@ -11,6 +11,9 @@ domElements.main.addEventListener('click', function (e) {
     const typePokemon = e.target.closest('.type');
     console.log(typePokemon);
     getPokemonByType(`${typePokemon.dataset.type}`);
+  } else if (e.target.closest('.pokemon-list-item')) {
+    const list = e.target.closest('.pokemon-list-item');
+    getPokemon(list.dataset.name);
   }
 });
 
