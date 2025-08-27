@@ -7,6 +7,10 @@ domElements.main.addEventListener('click', function (e) {
   if (e.target.closest('.overlay')) {
     domElements.pokemonInfoCard.classList.add('hidden');
     domElements.overlay.classList.add('hidden');
+  } else if (e.target.closest('.type')) {
+    const typePokemon = e.target.closest('.type');
+    console.log(typePokemon);
+    getPokemonByType(`${typePokemon.dataset.type}`);
   }
 });
 
