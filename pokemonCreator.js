@@ -29,3 +29,17 @@ export const getPokemon = async p => {
     console.log(error);
   }
 };
+
+export const getPokemonByType = async type => {
+  try {
+    const pokemonData = await fetch(`https://pokeapi.co/api/v2/type/${type}`);
+    const pokemonD = await pokemonData.json();
+    const { pokemon } = pokemonD;
+    const pokemons = pokemon.map(p => p.pokemon.name);
+    pokemons.forEach(pokemon => {
+      makePokemons(pokemon);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
