@@ -55,7 +55,12 @@ h1 {
   height: 70%;
   width: 75%;
 }
-
+.pokemon-list-item {
+  cursor: pointer;
+}
+.pokemon-list-item:hover {
+  text-decoration: underline;
+}
 /*Box 2*/
 .pokemon-type-box {
   width: 25%;
