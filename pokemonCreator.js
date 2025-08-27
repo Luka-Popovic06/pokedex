@@ -43,3 +43,8 @@ export const getPokemonByType = async type => {
     console.log(error);
   }
 };
+
+const makePokemons = name => {
+  const html = `<li class="pokemon-list-item" data-name=${name}>${name}</li>`;
+  domElements.pokemonList.insertAdjacentHTML('afterbegin', html);
+};
