@@ -8,20 +8,14 @@ export const getPokemon = async p => {
     const { name, height, weight, types, sprites, id } = pokemon;
     const { front_default } = sprites;
 
-    const imageUrl = front_default;
-    const nameP = name;
-    const heightP = height;
-    const weightP = weight;
     const typeP = types.map(t => t.type.name).join(', ');
-    const pokemonId = id;
-    console.log(pokemon);
 
-    domElements.pokemonImg.src = imageUrl;
-    domElements.pokemonName.textContent = nameP;
-    domElements.pokemonHeight.textContent = `${heightP} m`;
-    domElements.pokemonWeight.textContent = ` ${weightP} kg`;
+    domElements.pokemonImg.src = front_default;
+    domElements.pokemonName.textContent = name;
+    domElements.pokemonHeight.textContent = `${height} m`;
+    domElements.pokemonWeight.textContent = ` ${weight} kg`;
     domElements.pokemonType.textContent = `${typeP}`;
-    domElements.pokemonId.textContent = `${pokemonId}`;
+    domElements.pokemonId.textContent = `${id}`;
 
     domElements.pokemonInfoCard.classList.remove('hidden');
     domElements.overlay.classList.remove('hidden');
